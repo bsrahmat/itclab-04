@@ -1,21 +1,46 @@
-# itclab-04
+# itclab-04 - PWM Testing
 About Advanced iTCLab Research
 
 # Pulse Width Modulation (PWM) Testing with the iTCLab Kit
 
-The most famous control system in the industry is the PID. PID combines three proportional, integral, and derivative control actions. Each of these control actions has certain advantages, where the proportional control action has the advantage of a very fast rise time, the integral control action has the advantage of reducing errors, and the derivative control action has the advantage of reducing errors or reducing overshoot. The purpose of combining these three control actions is to produce output with fast rise time and small errors.
-
 <p align="center">
-  <img src="https://github.com/bsrahmat/itclab-03/blob/main/pid01.jpg" alt="" class="img-responsive" width="700">
+  <img src="https://github.com/bsrahmat/itclab-04/blob/main/PWM1.jpg" alt="" class="img-responsive" width="700">
 </p>
 
-To easily understand how the PID control system works, you can read the following tutorial (Indonesian version): https://www.academia.edu/101176526.
+PWM stands for Pulse Width Modulation. So, PWM is a modulation technique that changes the pulse width with a fixed frequency and amplitude value. PWM can be considered the opposite of ADC (Analog to Digital Converter), which converts Analog signals to Digital. PWM or Pulse Width Modulation generates analog signals from Digital devices (iTCLab Kits).
 
-With the following simulation program using Python Jupyter Notebook: https://github.com/bsrahmat/itclab-03/blob/main/pid_widget.ipynb.
+The PWM signal will remain ON for a specific time and then stalled or OFF for the rest of the period. What makes this PWM unique and more valuable is that we can specify how long the ON state should last by controlling the PWM duty cycle.
+
+The percentage of time the PWM signal remains ON time is known as the "duty cycle." The condition where the signal is always ON is called a 100% Duty Cycle, while the state where the movement is always OFF is called a 0% Duty Cycle.
+
+The formula for calculating the work cycle or duty cycle can be shown as the equation below.
+
+Duty Cycle = tON / (tON + tOFF)
+
+Or
+
+Duty Cycle = ton / ttotal
+
+Where :
+
+tON = ON time or time when the output voltage is high (high or 1)
+
+tOFF = OFF time or time when the output voltage is low (low or 0)
+
+ttotal = time of one cycle or the sum of tON and tOFF or also called the "one wave period."
+
+Duty Cycle = ON Time / (ON Time + OFF Time)
+
+The following image represents a PWM signal with a 60% duty cycle. As we can see, considering the entire time period (ON time + OFF time), the PWM signal is only ON for 60% of the time period.
+
+<p align="center">
+  <img src="https://github.com/bsrahmat/itclab-04/blob/main/PWM3.jpg" alt="" class="img-responsive" width="700">
+</p>
 
 
-In practice, control systems using PID controllers always require a plant. One of the plants we recommend is the Internet-Based Temperature Control Lab (iTCLab) plant.
+To easily understand how the Pulse Width Modulation (PWM) works, you can read the following tutorial (Indonesian version): https://www.academia.edu/101739949.
 
+In a control system using a PID controller, PWM is the output of the PID controller, where this output is regulated to control the plant. So that the plant can produce results as expected. In practice, to know how the PID controller works with PWM settings, it can be implemented in the Internet-Based Temperature Control Lab (iTCLab) Kit.
 
 iTCLab - Internet-Based Temperature Control Lab. Temperature control kit for feedback control applications with an ESP32 Microcontroller, LED, two heaters, and two temperature sensors. The heating power output is adjusted to maintain the desired temperature setpoint. Heat energy from the heater is transferred by conduction, convection, and radiation to the temperature sensor. Heat is also transferred from the device to the environment.
 
