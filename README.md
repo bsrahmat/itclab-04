@@ -40,6 +40,8 @@ The following image represents a PWM signal with a 60% duty cycle. As we can see
 
 To easily understand how the Pulse Width Modulation (PWM) works, you can read the following tutorial (Indonesian version): https://www.academia.edu/101739949.
 
+Arduino coding for PWM testing using the iTCLab kit can use the following sample program: https://github.com/bsrahmat/itclab-04/blob/main/04-Test_PWM.ino.
+
 In a control system using a PID controller, PWM is the output of the PID controller, where this output is regulated to control the plant. So that the plant can produce results as expected. In practice, to know how the PID controller works with PWM settings, it can be implemented in the Internet-Based Temperature Control Lab (iTCLab) Kit.
 
 iTCLab - Internet-Based Temperature Control Lab. Temperature control kit for feedback control applications with an ESP32 Microcontroller, LED, two heaters, and two temperature sensors. The heating power output is adjusted to maintain the desired temperature setpoint. Heat energy from the heater is transferred by conduction, convection, and radiation to the temperature sensor. Heat is also transferred from the device to the environment.
